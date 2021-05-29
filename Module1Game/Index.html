@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+  <head>
+    <title>SnakeTheGame</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles/style.css"/>
+  </head>
+
+  <body>
+    <div class="mainGameLayout backgroundBoard">
+      <div>
+        <div class="title">
+          <h1>SnakeTheGame</h1>
+          <h2>This is just another Snake remake!</h2> 
+          <div class="about">
+            <h3>About the game:</h3>
+            <p>Your objective is simple, control the snake in order to eat as many apples as posible without accidentally eating yourself... cause that's kinda dumb to be honest.</p>
+            <p>In tihs version of the game the borders will allow you to appear on the opposite side of the board, so use that to your advantage!</p>
+        </div>  
+        </div>   
+        <hr>
+            <div id="menu" class="parchment">
+              <div>
+                <h3>Controls:</h3>            
+                <img class="controls" src="./GameAssets/WASD Keys.png" alt="controls">
+              </div>
+              <div class="information">
+                <h3>Main Items:</h3>                
+                <div class="snakeInfo">
+                  <img class="icon" src="./GameAssets/SnakeAssets/head_down.png" alt="Snake">
+                  <div>
+                    <h4>Snake:</h4>
+                    <p class="itemInfo">Move the snake to eat apples, avoid your own body!</p>
+                  </div>
+                </div>
+                <div class="snakeInfo">
+                  <img class="icon" src="./GameAssets/SnakeAssets/apple.png" alt="Apple">
+                  <div>
+                    <h4>Apple:</h4>
+                    <p class="itemInfo">Apples spawn randomly, eating it increases the snakes length and score.</p>
+                  </div>
+                </div>
+                <div class="snakeInfo">
+                  <img class="icon" src="./GameAssets/SnakeAssets/GoldenApple.png" alt="Golden Apple">
+                  <div>
+                    <h4>Golden Apple:</h4>
+                    <p class="itemInfo">Bonus item, increases the snakes length and score by 3.<br> Disappears after a few seconds.</p>
+                  </div>
+                </div>               
+            </div>           
+            </div>
+          </div>
+      <div>
+          <canvas id="canvas" width="600" height="600"></canvas>
+        <div class="selectors">
+          <button id="start-button" class="button" type="button">START</button>
+          <button class="button" onClick="window.location.reload();">RESTART</button>
+        </div>
+      </div>
+    </div>      
+    
+      <script type="text/javascript" src="./Js/snake.js"></script>
+      <script type="text/javascript" src="./Js/apple.js"></script>
+      <script type="text/javascript" src="./Js/background.js"></script>
+      <script type="text/javascript" src="./Js/game.js"></script>
+      <script type="text/javascript" src="./Js/index.js"></script>
+  </body>
+</html>
