@@ -10,6 +10,9 @@ class Game {
         this.timer = null;
         this.counter = 0;
         this.score = 0;
+
+        this.theme = new Audio("./GameAssets/277363__nyan-cat__8bit-race-music.mp3");
+        this.theme.volume = 0.1
     }
 
     startGame(){
@@ -19,7 +22,7 @@ class Game {
             this.clear();
 
             this.move();
-
+            this.theme.play();
             if(this.counter % 120 === 0 && this.counter > 0){
                 this.goldenApple.push(new Apple(ctx,true));
                 this.timer = setTimeout(() => {

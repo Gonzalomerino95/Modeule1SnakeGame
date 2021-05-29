@@ -15,6 +15,10 @@ class Apple {
         this.appleSprite.onload = () => {
             this.appleSprite.isReady = true;
         }
+
+        this.sounds = {
+            appleCrunch: new Audio("./GameAssets/20279__koops__apple-crunch-16.wav")
+        }
     }
 
     isReady() {
@@ -45,7 +49,7 @@ class Apple {
 
             let points = this.isGolden ? 3 : 1;
             //console.log("Points: ", points)
-            
+            this.sounds.appleCrunch.play();
             snake.generateBody(points);
             score = score + points;
             //console.log("Score: ", score)

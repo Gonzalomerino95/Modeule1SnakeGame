@@ -3,8 +3,7 @@ const ctx = canvas.getContext("2d");
 
 window.onload = () => {
     let gameStarted = false
-    document.getElementById('start-button').onclick = () => {
-      
+    document.getElementById('start-button').onclick = () => {     
       if(gameStarted === false){
         gameStarted = true;
         start();
